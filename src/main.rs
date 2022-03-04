@@ -14,10 +14,7 @@ fn main() {
 
     let mut topology = wgpu::PrimitiveTopology::TriangleList;
     let mut index_format = None;
-    if  primitive_type == "triangle-list" {
-        topology = wgpu::PrimitiveTopology::TriangleList;
-        index_format = None;
-    } else if  primitive_type == "triangle-strip" {
+    if  primitive_type == "triangle-strip" {
         topology = wgpu::PrimitiveTopology::TriangleStrip;
         index_format = Some(wgpu::IndexFormat::Uint32);
     }
