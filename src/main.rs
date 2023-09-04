@@ -1,8 +1,6 @@
 mod common;
 
-use winit::{
-    event_loop::{EventLoop},
-};
+use winit::event_loop::EventLoop;
 use std::borrow::Cow;
 
 fn main() {
@@ -29,5 +27,5 @@ fn main() {
     
     window.set_title(&*format!("{}: {}", "Primitive", primitive_type));
     env_logger::init();   
-    pollster::block_on( common::run(event_loop, window, inputs, 9));    
+    pollster::block_on( common::run(event_loop, &window, inputs, 9));    
 }
